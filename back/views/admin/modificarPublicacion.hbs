@@ -1,0 +1,30 @@
+    <div class="contenedorAgregar">
+        <div class="row">
+            <p class="text-end"><a class="btn btn-danger" href="/admin/publicaciones">Volver <i class="fas fa-sign-out-alt"></i></a></p>
+        </div>
+        <div class="clo-6 offset-3">
+            <h4>Modificar publicación con el ID {{publicacion.id_publicacion}}</h4>
+            <form action="/admin/publicaciones/modificarPublicacion" method="post" enctype="multipart/form-data">
+                <input type="hidden" name="id_publicacion" value="{{publicacion.id_publicacion}}">
+                <div class="mb-3 row">
+                    <p>
+                        <label>Imagen:
+                            <input type="file" name="imagen_publicacion">
+                        </label>
+                    </p>
+                    <p>
+                        <label><input type="checkbox" name="img_delete" id="img_delete" value="1">Eliminar la imagen actual?</label>
+                        <input type="hidden" class="form-control" name="img_original" value="{{publicacion.img_id}}"/>
+                    </p>
+                </div>
+                <div class="mb-3 row">
+                    <label for="">Comentario</label>
+                    <textarea type="text" class="form-control" placeholder="Descripción" name="descripcion_publicacion">{{publicacion.descripcion_publicacion}}</textarea>
+                </div>
+                <button type="submit" class="btn btn-danger">Modificar</button>
+            </form>
+            {{#if error}}
+                <p>{{message}}</p>
+            {{/if}}
+        </div>
+    </div>

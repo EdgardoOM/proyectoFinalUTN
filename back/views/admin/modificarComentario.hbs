@@ -1,0 +1,34 @@
+    <div class="contenedorAgregar">
+        <div class="row">
+            <p class="text-end"><a class="btn btn-danger" href="/admin/comentarios">Volver <i class="fas fa-sign-out-alt"></i></a></p>
+        </div>
+        <div class="clo-6 offset-3">
+            <h4>Modificar comentario con el ID {{comentario.id_comentario}}</h4>
+            <form action="/admin/comentarios/modificarComentario" method="post" enctype="multipart/form-data">
+                <input type="hidden" name="id_comentario" value="{{comentario.id_comentario}}">
+                <div class="mb-3 row">
+                    <p>
+                        <label>Imagen:
+                            <input type="file" name="imagen_comentario">
+                        </label>
+                    </p>
+                    <p>
+                        <label><input type="checkbox" name="img_delete" id="img_delete" value="1">Eliminar la imagen actual?</label>
+                        <input type="hidden" class="form-control" name="img_original" value="{{comentario.img_id}}"/>
+                    </p>
+                </div>
+                <div class="mb-3 row">
+                    <label for="">Usuario</label>
+                    <input type="text" class="form-control" placeholder="Usuario" name="usuario_comentario" value="{{comentario.usuario_comentario}}">
+                </div>
+                <div class="mb-3 row">
+                    <label for="">Comentario</label>
+                    <textarea type="text" class="form-control" placeholder="Comentario" name="comentario_comentario">{{comentario.comentario_comentario}}</textarea>
+                </div>
+                <button type="submit" class="btn btn-danger">Modificar</button>
+            </form>
+            {{#if error}}
+                <p>{{message}}</p>
+            {{/if}}
+        </div>
+    </div>

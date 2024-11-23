@@ -1,0 +1,40 @@
+.contenedorComentarios {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--colorGrisClaro);
+    padding: 30px 50px;
+    justify-content: space-evenly;
+    row-gap: 15px;
+}
+
+.comentario {
+    width: 80%;
+    height: 175px;
+    padding: 15px;
+    border: 2px solid white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.fotoUsuario {
+    width: 90px;
+    height: 90px;
+    background-color: var(--colorPrincipal);
+    border-radius: 50%;
+}
+
+.datosUsuario {
+    width: 80%;
+}
+
+.nombreUsuario {
+    font-size: 42px;
+    color: var(--colorPrincipal);
+}
+
+.comentarioUsuario {
+    font-size: 18px;
+    color: var(--colorTexto);
+}

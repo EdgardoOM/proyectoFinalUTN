@@ -1,0 +1,24 @@
+    <div class="contenedorAgregar">
+        <div class="row">
+            <p class="text-end"><a class="btn btn-danger" href="/admin/comentarios">Volver <i class="fas fa-sign-out-alt"></i></a></p>
+        </div>
+        <div class="clo-6 offset-3">
+            <h4>Agregar un nuevo Comentario</h4>
+            <form action="/admin/comentarios/agregarComentarios" method="post" enctype="multipart/form-data">
+                <div class="mb-3 row">
+                    <label>Imágen: </label>
+                    <input type="file" class="form-control" name="imagen_comentario" id="imagen_comentario">
+                </div>
+                <div class="mb-3 row">
+                    <input type="text" class="form-control" placeholder="Usuario" name="usuario_comentario">
+                </div>
+                <div class="mb-3 row">
+                    <input type="text" class="form-control" placeholder="Comentario" name="comentario_comentario">
+                </div>
+                <button type="submit" class="btn btn-danger">Guardar</button>
+            </form>
+            {{#if error}}
+                <p>{{message}}</p>
+            {{/if}}
+        </div>
+    </div>

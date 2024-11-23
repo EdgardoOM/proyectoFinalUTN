@@ -1,0 +1,25 @@
+.contenedorPublicaciones {
+    border: 2px solid white;
+    padding: 50px 0;
+    margin: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 30px;
+}
+
+.publicacion {
+    width: 280px;
+    height: 400px;
+    border: 1px solid var(--colorGrisClaro);
+}
+
+.publicacion img {
+    margin: 15px;
+}
+
+.descripcionPublicacion {
+    font-size: 18px;
+    color: var(--colorTexto);
+    margin: 0 15px;
+}

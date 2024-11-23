@@ -1,0 +1,13 @@
+<div class="contenedorGris">
+    <div class="row">
+        <p class="text-end">Hola {{persona}}! <a class="btn btn-danger" href="/admin/login/logout">Cerrar sesión <i class="fas fa-sign-out-alt"></i></a></p>
+    </div>
+    <h2 style="text-align: center;">Opciones de Administrador</h2>
+    <div class="row-administrador">
+        <form action="/admin/administrador" method="post">
+            <a class="btn btn-warning" href="/admin/productos" type="submit">Administrar Productos <i class="fa-solid fa-cash-register"></i></a>
+            <a class="btn btn-warning" href="/admin/publicaciones" type="submit">Administrar Publicaciones <i class="fa-brands fa-square-instagram"></i></a>
+            <a class="btn btn-warning" href="/admin/comentarios">Administrar Comentarios <i class="fa-solid fa-comments"></i></a>
+        </form>
+    </div>
+</div>

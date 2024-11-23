@@ -1,0 +1,23 @@
+.contactoFoto {
+    position: relative;
+    width: 100%;
+    margin: 70px auto;
+    overflow: hidden;
+}
+
+.cuadroContacto {
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    width: 400px;
+    height: 440px;
+    background-color: var(--colorPrincipal);
+}
+
+.contacto .tituloBlanco {
+    margin: 70px 0;
+}
+
+.contacto .descripcionBlanco {
+    margin-top: 30px;
+}

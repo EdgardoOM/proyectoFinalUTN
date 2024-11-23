@@ -1,0 +1,75 @@
+.productos {
+    background-color: var(--colorGrisClaro);
+    margin: 70px 0;
+    padding: 5px 0px;
+    padding-bottom: 70px;
+}
+
+.productos .descripcion {
+    margin-bottom: 50px;
+}
+
+.contenedorProductos {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 35px;
+    column-gap: 10px;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.producto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 295px;
+    height: 560px;
+    border: 2px solid white;
+    border-radius: 25px;
+    padding: 0 15px 15px 15px;
+}
+
+.fotoProducto {
+    width: 250px;
+    height: 250px;
+    margin: 20px auto;
+}
+
+.tituloProducto {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--colorTexto);
+}
+
+.descripcionProducto {
+    font-size: 18px;
+    color: var(--colorTexto);
+    margin: 10px 0;
+    background-color: var(--colorGrisBody);
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.precioProducto {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.botonComprar {
+    background-color: var(--colorPrincipal);
+    color: white;
+    display: inline-block;
+    padding: 15px 0;
+    width: 100%;
+    text-align: center;
+    font-size: 21px;
+    text-decoration: none;
+    border: 1px solid var(--colorPrincipal);
+    border-radius: 0 0 15px 15px;
+    transition: background-color .4s ease, color .4s ease;
+}
+
+.botonComprar:hover {
+    background-color: var(--colorGrisClaro);
+    color: var(--colorPrincipal);
+}

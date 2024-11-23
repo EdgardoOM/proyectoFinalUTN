@@ -1,0 +1,58 @@
+form {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.formIzq {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.formDrcha {
+    width: 50%;
+}
+
+form input {
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid var(--colorPrincipal);
+    height: 50px;
+    width: 90%;
+    margin: 10px auto;
+}
+
+#mensaje {
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid var(--colorPrincipal);
+    height: 90%;
+    width: 90%;
+    margin: 15px 0 0 35px;
+    resize: none;
+}
+
+input::placeholder, textarea::placeholder {
+    color: var(--colorTexto);
+    font-size: 16px;
+    padding-left: 15px;
+    font-family: "Poiret One", sans-serif;
+}
+
+#btnEnviar {
+    background-color: var(--colorPrincipal);
+    border: none;
+    color: white;
+    font-size: 16px;
+    margin-top: 50px;
+    width: 450px;
+    transition: color .4s ease, background-color .4s ease, border .4s ease;
+}
+
+#btnEnviar:hover {
+    color: var(--colorTexto);
+    background-color: transparent;
+    border: 1px solid var(--colorTexto);
+    cursor: pointer;
+}

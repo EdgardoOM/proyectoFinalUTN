@@ -1,0 +1,21 @@
+    <div class="contenedorAgregar">
+        <div class="row">
+            <p class="text-end"><a class="btn btn-danger" href="/admin/publicaciones">Volver <i class="fas fa-sign-out-alt"></i></a></p>
+        </div>
+        <div class="clo-6 offset-3">
+            <h4>Agregar una nueva Publicacion</h4>
+            <form action="/admin/publicaciones/agregarPublicaciones" method="post" enctype="multipart/form-data">
+                <div class="mb-3 row">
+                    <label>Imágen: </label>
+                    <input type="file" class="form-control" name="imagen_publicacion" id="imagen_publicacion">
+                </div>
+                <div class="mb-3 row">
+                    <input type="text" class="form-control" placeholder="Nombre" name="descripcion_publicacion">
+                </div>
+                <button type="submit" class="btn btn-danger">Guardar</button>
+            </form>
+            {{#if error}}
+                <p>{{message}}</p>
+            {{/if}}
+        </div>
+    </div>

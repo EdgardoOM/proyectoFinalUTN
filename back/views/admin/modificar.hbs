@@ -1,0 +1,38 @@
+    <div class="contenedorAgregar">
+        <div class="row">
+            <p class="text-end"><a class="btn btn-danger" href="/admin/productos">Volver <i class="fas fa-sign-out-alt"></i></a></p>
+        </div>
+        <div class="clo-6 offset-3">
+            <h4>Modificar producto con el ID {{producto.id_producto}}</h4>
+            <form action="/admin/productos/modificar" method="post" enctype="multipart/form-data">
+                <input type="hidden" name="id_producto" value="{{producto.id_producto}}">
+                <div class="mb-3 row">
+                    <p>
+                        <label>Imagen:
+                            <input type="file" name="imagen_producto">
+                        </label>
+                    </p>
+                    <p>
+                        <label><input type="checkbox" name="img_delete" id="img_delete" value="1">Eliminar la imagen actual?</label>
+                        <input type="hidden" class="form-control" name="img_original" value="{{producto.img_id}}"/>
+                    </p>
+                </div>
+                <div class="mb-3 row">
+                    <label for="">Nombre</label>
+                    <input type="text" class="form-control" placeholder="Nombre" name="nombre_producto" value="{{producto.nombre_producto}}">
+                </div>
+                <div class="mb-3 row">
+                    <label for="">Descripción</label>
+                    <textarea type="text" class="form-control" placeholder="Descripción" name="descripcion_producto">{{producto.descripcion_producto}}</textarea>
+                </div>
+                <div class="mb-3 row">
+                    <label for="">Precio</label>
+                    <input type="number" class="form-control" placeholder="Precio" name="precio_producto" value="{{producto.precio_producto}}">
+                </div>
+                <button type="submit" class="btn btn-danger">Modificar</button>
+            </form>
+            {{#if error}}
+                <p>{{message}}</p>
+            {{/if}}
+        </div>
+    </div>

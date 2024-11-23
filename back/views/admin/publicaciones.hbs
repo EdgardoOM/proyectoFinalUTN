@@ -1,0 +1,44 @@
+<div class="contenedorGris">
+    <div class="row">
+        <p class="text-end">Hola {{persona}}! <a class="btn btn-danger" href="/admin/login/logout">Cerrar sesión <i class="fas fa-sign-out-alt"></i></a></p>
+    </div>
+    <div class="row">
+        <p class="text-end"><a class="btn btn-warning" href="/admin/administrador">Volver a Administrador <i class="fa-solid fa-screwdriver-wrench"></i></a></p>
+    </div>
+    <div class="row">
+        <div class="col-7">
+            <h3>Listado de Publicaciones</h3>
+        </div>
+        <div class="col-5 text-end">
+            <a href="/admin/publicaciones/agregarPublicaciones" class="btn btn-success"><i class="fa fa-plus"></i>Nuevo</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <thead>
+                    <tr class="table-dark">
+                        <th class="col">#</th>
+                        <th class="col">Imagen</th>
+                        <th class="col">Publicación</th>
+                        <th class="text-end">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each publicaciones}}
+                    <tr>
+                        <th class="col">{{id_publicacion}}</th>
+                        
+                        <td>{{{imagen}}}</td>
+                        <td>{{descripcion_publicacion}}</td>
+                        <td class="text-end">
+                            <a href="/admin/publicaciones/modificarPublicacion/{{id_publicacion}}" class="btn btn-secundary"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                            <a href="/admin/publicaciones/eliminarPublicacion/{{id_publicacion}}" class="btn btn-secundary"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

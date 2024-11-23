@@ -1,0 +1,27 @@
+    <div class="contenedorAgregar">
+        <div class="row">
+            <p class="text-end"><a class="btn btn-danger" href="/admin/productos">Volver <i class="fas fa-sign-out-alt"></i></a></p>
+        </div>
+        <div class="clo-6 offset-3">
+            <h4>Agregar un nuevo producto</h4>
+            <form action="/admin/productos/agregar" method="post" enctype="multipart/form-data">
+                <div class="mb-3 row">
+                    <label>Imágen: </label>
+                    <input type="file" class="form-control" name="imagen_producto" id="imagen_producto">
+                </div>
+                <div class="mb-3 row">
+                    <input type="text" class="form-control" placeholder="Nombre" name="nombre_producto">
+                </div>
+                <div class="mb-3 row">
+                    <textarea type="text" class="form-control" placeholder="Descripción" name="descripcion_producto"></textarea>
+                </div>
+                <div class="mb-3 row">
+                    <input type="number" class="form-control" placeholder="Precio" name="precio_producto">
+                </div>
+                <button type="submit" class="btn btn-danger">Guardar</button>
+            </form>
+            {{#if error}}
+                <p>{{message}}</p>
+            {{/if}}
+        </div>
+    </div>

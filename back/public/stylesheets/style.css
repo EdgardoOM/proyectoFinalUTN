@@ -1,0 +1,140 @@
+:root {
+  --colorPrincipal: #BB0009;
+  --colorGrisClaro: #D2D3D5;
+  --colorGrisBody: #E6E7E8;
+  --colorTexto: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poiret One", sans-serif;
+  background-color: var(--colorGrisBody);
+}
+
+.cuadradoFondo {
+  width: 100vw;
+  height: 40vh;
+  background-color: var(--colorPrincipal);
+  position: fixed;
+  top: 0;
+  z-index: -1;
+}
+
+.contenedor {
+  margin: 0 auto;
+  width: min(80%, 1570px);
+  border: 4px yellow;
+  height: 50vh;
+  background-color: var(--colorGrisBody);
+  margin-top: 70px;
+}
+
+.contenedorSitio {
+  width: 90%;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+header img {
+  position: absolute;
+  top: 0;
+  z-index: 0;
+  object-fit: cover;
+}
+
+header .contenedorGris {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: var(--colorGrisClaro);
+  position: relative;
+  z-index: 999;
+}
+
+header .contenedorGris .logoBanner {
+  width: 200px;
+  height: 160px;
+  margin-top: 50px;
+}
+
+footer {
+  width: 100%;
+  height: 70px;
+  background-color: var(--colorPrincipal);
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+  margin-top: 15px;
+  justify-self: flex-end;
+}
+
+.logoBlanco img {
+  height: 50px;
+}
+
+.contenedorFormulario {
+  width: 100%;
+  height: 300px;
+  padding: 20px 150px;
+  margin-top: 15px;
+}
+
+.error {
+  background-color: var(--colorPrincipal);
+  color: var(--colorGrisBody);
+  padding: 10px 25px;
+}
+
+.row {
+  padding: 10px 0;
+  background-color: var(--colorGrisBody);
+  margin: 0 auto;
+}
+
+.row-administrador {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80%;
+  height: 150px;
+  margin: 0 auto;
+  border: 1px solid var(--colorGrisClaro);
+}
+
+.contenedorAgregar {
+  width: 100%;
+  height: 600px;
+  background-color: var(--colorGrisBody);
+  /* margin: 50px 0;
+  padding-right: 50px; */
+}
+
+form {
+  width: 90%;
+}
+
+.row {
+  width: 80%;
+}
+
+.btn {
+  padding: 15px 25px;
+}
